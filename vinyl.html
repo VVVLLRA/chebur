@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Музыкальная программа — Чебур</title>
+  <link rel="stylesheet" href="globals.css">
+  <link rel="stylesheet" href="vinyl.css">
+</head>
+<body>
+  <main class="screen">
+    <div class="scene">
+      <img class="program-title" src="img/image-3.webp" alt="В музыкальной программе">
+      <img class="rug" src="img/image-34.webp" alt="Узорный ковёр">
+      <img class="turntable" src="img/player.webp" alt="Виниловый проигрыватель">
+      <div class="hero-frame" aria-hidden="true"></div>
+
+      <div class="hero-title" id="current-title">ТЫ НЕ ВЕРЬ СЛЕЗАМ</div>
+      <div class="hero-artist" id="current-artist">шура</div>
+      <div class="transport" role="group" aria-label="Управление проигрывателем">
+        <button class="transport-button" type="button" data-action="previous" aria-label="Предыдущий трек"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M7 8v32M41 8 17 24l24 16z"/></svg></button>
+        <button class="transport-button transport-play" type="button" data-action="play" aria-label="Воспроизвести" aria-pressed="false"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 5v38l32-19z"/></svg></button>
+        <button class="transport-button" type="button" data-action="next" aria-label="Следующий трек"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M41 8v32M7 8l24 16L7 40z"/></svg></button>
+      </div>
+      <div class="also">а так же</div>
+
+      <section class="tracks" aria-label="Музыкальная программа">
+        <article class="track track-1" role="button" tabindex="0" data-track="0" data-title="ТЫ НЕ ВЕРЬ СЛЕЗАМ" data-artist="Шура" data-src="audio/shura-ty-ne-ver-slezam.mp3" aria-label="Выбрать трек: Ты не верь слезам, Шура"><div><h2>ТЫ НЕ ВЕРЬ СЛЕЗАМ</h2><p>Шура</p></div></article>
+        <article class="track track-2" role="button" tabindex="0" data-track="1" data-title="ЯСНЫЙ МОЙ СВЕТ" data-artist="Татьяна Буланова" data-src="audio/tatjana-bulanova-jasnyjj-mojj-svet.mp3" aria-label="Выбрать трек: Ясный мой свет, Татьяна Буланова"><div><h2>ЯСНЫЙ МОЙ СВЕТ</h2><p>Татьяна Буланова</p></div></article>
+        <article class="track track-3" role="button" tabindex="0" data-track="2" data-title="НОЧЬ" data-artist="Андрей Губин" data-src="audio/andrejj-gubin-noch.mp3" aria-label="Выбрать трек: Ночь, Андрей Губин"><div><h2>НОЧЬ</h2><p>Андрей Губин</p></div></article>
+        <article class="track track-4" role="button" tabindex="0" data-track="3" data-title="ЗИМА-ХОЛОДА" data-artist="Андрей Губин" data-src="audio/andrejj-gubin-zima-kholoda.mp3" aria-label="Выбрать трек: Зима-холода, Андрей Губин"><div><h2>ЗИМА-ХОЛОДА</h2><p>Андрей Губин</p></div></article>
+      </section>
+
+      <a class="back" href="index.html">← вернуться на главную</a>
+    </div>
+    <audio id="track-audio" preload="metadata"></audio>
+  </main>
+  <script src="vinyl.js"></script>
+</body>
+</html>

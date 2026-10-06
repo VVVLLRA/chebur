@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Чебур</title>
+  <link rel="stylesheet" href="globals.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="screen" id="screen">
+
+  <!-- ЧЕБУР -->
+  <section class="hero">
+    <h1 class="title a" style="--x:34;--y:171">чебур</h1>
+    <div class="blk tv a" style="--x:0;--y:263;--w:1496">
+      <img class="tv__ballet" src="img/cheburek-tv.gif" alt="">
+      <img class="tv__frame" src="img/photoroom-1.webp" alt="Телевизор">
+    </div>
+  </section>
+
+  <!-- КУХНЯ -->
+  <div class="band band-a">
+    <img class="band__img a" style="--x:0;--y:1550;--w:1512" src="img/rectangle-27.webp" alt="">
+    <section id="kitchen">
+      <h2 class="title a" style="--x:51;--y:1450">кухня</h2>
+      <div class="grid" data-cat="kitchen"></div>
+    </section>
+  </div>
+
+  <!-- БАР -->
+  <section id="bar">
+    <h2 class="title a" style="--x:51;--y:3029">бар</h2>
+    <div class="grid" data-cat="bar"></div>
+  </section>
+
+  <!-- МЕРЧ -->
+  <div class="band band-b">
+    <img class="band__img a" style="--x:0;--y:4529;--w:1512" src="img/rectangle-28.webp" alt="">
+    <section id="merch">
+      <h2 class="title a" style="--x:51;--y:4591">мерч чебур</h2>
+      <div class="grid" data-cat="merch"></div>
+    </section>
+  </div>
+
+  <!-- КОРЗИНА -->
+  <section id="cart">
+    <h2 class="title a" style="--x:33;--y:6307">кор_зина</h2>
+    <div class="blk basket a" style="--x:0;--y:6400;--w:1512">
+      <div class="basket__items" id="cartItems"></div>
+      <img class="basket__img" src="img/image-35.webp" alt="Корзина">
+      <div class="basket__empty" id="cartEmpty">корзина пуста</div>
+    </div>
+    <button class="order" id="orderBtn" type="button">Заказать →</button>
+  </section>
+
+  <!-- МУЗЫКА -->
+  <section id="music">
+    <div class="blk music a" style="--x:0;--y:7836;--w:1512">
+      <img class="music__title" src="img/image-3.webp" alt="В музыкальной программе">
+      <img class="music__rug" src="img/image-34.webp" alt="">
+      <a class="music__link" href="vinyl.html" aria-label="Открыть музыкальную программу">
+        <img class="music__player" src="img/player.webp" alt="Открыть музыкальную программу">
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- Окно «спасибо за заказ» -->
+<div class="modal" id="modal" hidden>
+  <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <h3 class="modal__title" id="modalTitle">СПАСИБО ЗА ЗАКАЗ!</h3>
+    <p class="modal__text">чебуреки уже в пути</p>
+    <button class="modal__close" id="modalClose" type="button">ок</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

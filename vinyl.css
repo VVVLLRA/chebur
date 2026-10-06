@@ -1,0 +1,127 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; background: #d1c7b6; }
+body { color: #000; }
+.screen {
+  --scale: calc(100cqw / 1512px);
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1512 / 5053;
+  container-type: inline-size;
+  overflow: hidden;
+  background: #d1c7b6;
+}
+.scene {
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 1512px;
+  height: 5053px;
+  transform: scale(var(--scale));
+  transform-origin: top left;
+  overflow: hidden;
+}
+.program-title {
+  position: absolute;
+  z-index: 2;
+  top: 130px;
+  left: 28px;
+  width: 1083px;
+  height: 230px;
+  object-fit: contain;
+}
+.rug {
+  position: absolute;
+  top: 515px;
+  left: 0;
+  width: 1401px;
+  height: 1158px;
+  object-fit: cover;
+}
+.turntable {
+  position: absolute;
+  z-index: 1;
+  top: 699px;
+  left: 268px;
+  width: 1244px;
+  height: 1287px;
+  object-fit: contain;
+}
+.hero-frame {
+  position: absolute;
+  top: 2045px;
+  left: 27px;
+  width: 1418px;
+  height: 648px;
+  border: 10px solid #000;
+  border-radius: 72px;
+}
+.hero-title, .track h2 {
+  position: absolute;
+  color: transparent;
+  -webkit-text-stroke: 7px #000;
+  font: 400 108.9px/1 "Mayak-Extended", sans-serif;
+  letter-spacing: 11.98px;
+  white-space: nowrap;
+}
+.hero-title { top: 2142px; left: 106px; }
+.hero-artist, .also, .track p {
+  position: absolute;
+  font: 300 108.9px/1 "Mayak-CondensedLight", sans-serif;
+}
+.hero-artist { top: 2259px; left: 106px; }
+.transport {
+  position: absolute;
+  z-index: 3;
+  top: 2460px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+.transport-button {
+  display: grid;
+  place-items: center;
+  width: 132px;
+  height: 132px;
+  padding: 8px;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  color: #000;
+  cursor: pointer;
+}
+.transport-button:hover { background: rgb(0 0 0 / 9%); }
+.transport-button:focus-visible { outline: 4px solid #000; outline-offset: 5px; }
+.transport-button svg { width: 100%; height: 100%; fill: currentColor; stroke: currentColor; stroke-width: 4; stroke-linejoin: round; }
+.transport-play.is-playing svg { display: none; }
+.transport-play.is-playing::after { content: ""; width: 40px; height: 40px; background: currentColor; }
+.also { top: 2854px; left: 110px; }
+.track {
+  position: absolute;
+  left: 43px;
+  width: 1418px;
+  height: 434px;
+  border: 10px solid #000;
+  border-radius: 72px;
+}
+.track h2 { top: 87px; left: 69px; margin: 0; font-size: 108.9px; }
+.track p { top: 205px; left: 69px; margin: 0; }
+.track-1 { top: 3011px; }
+.track-2 { top: 3520px; }
+.track-3 { top: 4013px; left: 46px; }
+.track-4 { top: 4533px; }
+.track { cursor: pointer; }
+.track:hover, .track.is-selected { background: rgb(0 0 0 / 5%); }
+.track:focus-visible { outline: 5px solid #333; outline-offset: 6px; }
+.back {
+  position: absolute;
+  left: 54px;
+  bottom: 24px;
+  color: #000;
+  font: 300 40px "Mayak-CondensedLight", sans-serif;
+  text-decoration: none;
+}
+.back:hover, .back:focus-visible { text-decoration: underline; }
+@media (min-width: 1512px) {
+  .screen { width: 1512px; margin: 0 auto; }
+}
